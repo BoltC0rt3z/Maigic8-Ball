@@ -1,2 +1,3 @@
+# Maigic8-Ball
 
-fortune-telling or seeking advice.
+Fortune-telling or seeking advice.
