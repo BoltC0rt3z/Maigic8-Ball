@@ -9,7 +9,6 @@ print('Hey, ' + "I'm the Magic 8 Ball, What is your name?")
 name = input()
 print('hello ' + name)
 
-
 def the_magic_ball():
     print('Ask me a question.')
     user_response = get_input()
