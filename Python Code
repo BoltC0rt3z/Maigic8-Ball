@@ -1,0 +1,37 @@
+import random
+
+replies = ['Yes, I am Sure', 'I am not certain', 'Without a doubt', 'Yes, very True', 'It never works',
+           'I am not sure', 'More often', 'Yes Signs point to yes', 'Rarely happens', 'Yeah, at times',
+           'Ask again later', '100% possible', 'Depends on situations', 'That is true', 'I dont think so',
+           'I do not understand', '', 'That is not true']
+
+print('Hey, ' + "I'm the Magic 8 Ball, What is your name?")
+name = input()
+print('hello ' + name)
+
+
+def the_magic_ball():
+    print('Ask me a question.')
+    user_response = get_input()
+    if not user_response:
+        return False
+    else:
+        print(replies[random.randint(0, len(replies) - 1)])
+        print('I hope that helped!')
+        ask_continue_or_quit()
+
+
+def ask_continue_or_quit():
+    print('Do you have another question? [Y/N] ')
+    user_response = input()
+    if user_response == 'Y':
+        the_magic_ball()
+    elif user_response == 'N':
+        exit()
+
+    # when its not Y or N ask again
+    else:
+        print('Kindly only use Y(yes) or N(no) to continue')
+        ask_continue_or_quit()
+
+    return True
